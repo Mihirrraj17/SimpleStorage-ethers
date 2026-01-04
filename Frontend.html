@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SetValue</title>
+    <style>
+      .container {
+        height: 100px;
+        max-width: 300px;
+        background-color: white;
+        margin-top: 200px;
+        margin-left: 35%;
+        padding: 70px;
+        padding-top: 10px;
+        padding-bottom: 200px;
+        border-radius: 20px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+       .container-connect {
+        height: 100px;
+        max-width: 300px;
+        background-color: white;
+        margin-top: 200px;
+        margin-left: 35%;
+        padding: 70px;
+        padding-top: 10px;
+        padding-bottom: 100px;
+        border-radius: 20px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+      #header {
+        font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+        color: #333;
+        text-align: center;
+        margin-bottom: 25px;
+      }
+      button {
+        padding: 12px 24px;
+        margin-left: 20px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 600;
+        transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+        opacity 0.2s;
+      }
+      button:hover {
+        transform: scale(1.05);
+        opacity: 0.9;
+      }
+
+      button:active {
+        transform: scale(0.95);
+      }
+      .btn-submit {
+        background-color: #007bff;
+        color: white;
+      }
+      .btn-show {
+        background-color: #28a745;
+        color: white;
+      }
+      input {
+        width: 100%;
+        border-radius: 5px;
+        padding: 12px;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+        border: none;
+        cursor: pointer;
+        margin-bottom: 35px;
+        outline: none;
+      }
+      .btn-connect {
+        font-weight: 600;
+        font-size: 24px;
+        margin-left: 80px;
+        margin-top: 50px;
+        background-color: rgb(164, 65, 28);
+        color: aliceblue;
+      }
+      .hidden {
+        display: none;
+      }
+      .img{
+        height: 80px;
+        margin-bottom: -10px;
+        margin-left: 110px;
+      }
+    </style>
+  </head>
+  <body bgcolor="#FAF0E6">
+    <div id="hidden" class="hidden">
+      <div class="container">
+        <h2 id="header">Input Saver</h2>
+        <input id="numInput" type="text" placeholder="Enter the num..." />
+        <button class="btn-submit" onclick="setValue()">Submit</button>
+        <button class="btn-show" onclick="getValue()">Show Value</button>
+        <p id="statusMessage" style="margin-top:20px; color:#555;"></p>
+      </div>
+    </div>
+    <div id="container-connect" class="container-connect">
+      <img class="img" src="https://thumbs.dreamstime.com/b/metamask-logo-crypto-wallet-defi-web-dapps-nfts-isolated-white-background-vector-illustration-metamask-logo-crypto-247354947.jpg" alt="">
+    <button class="btn-connect" onclick="connect()">Connect</button>
+    </div>
+    <script src="dist/bundle.js">
+    </script>
+  </body>
+</html>
